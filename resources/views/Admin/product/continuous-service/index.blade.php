@@ -11,11 +11,11 @@
 @endsection
 @section('admin-content')
 
-<div class="callout ">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Create Product
-        </button>
-</div>
+  <div class="callout">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Create Product
+      </button>
+  </div>
 
    <!-- /.box -->
    <div class="box">
@@ -112,22 +112,23 @@
 
       <div class="modal-body">
         
-      <form action="" >
+      <form action="{{url('continuous_service/create')}}" method="post">
+      @csrf
+      name<input type="text" name="name"  />
+      price_per_month<input type="text" name="price_per_unit"  />
+      description<input type="text" name="description"  />
 
-        
+     
 
-
-
-
-      </form>
+ 
 
       </div>
-
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary" id="">Save changes</button>
       </div>
+      </form>
     </div>
   </div>
 

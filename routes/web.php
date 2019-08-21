@@ -21,3 +21,4 @@ Route::get('test', function () {
 Route::get('bkp_admin','admin\AccountController@index');
 Route::get('onetime_service','admin\ServiceController@onetimeService');
 Route::get('continuous_service','admin\ServiceController@continuousService');
+Route::post('continuous_service/create','admin\ServiceController@continuousServiceCreate');
