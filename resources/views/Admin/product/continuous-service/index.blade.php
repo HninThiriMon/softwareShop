@@ -17,6 +17,7 @@
       </button>
   </div>
 
+  
    <!-- /.box -->
    <div class="box">
             <div class="box-header">
@@ -112,7 +113,7 @@
 
       <div class="modal-body">
         
-      <form action="{{url('continuous_service/create')}}" method="post">
+      <form action="" id="csp">
       @csrf
       name<input type="text" name="name"  />
       price_per_month<input type="text" name="price_per_unit"  />
@@ -126,8 +127,8 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" id="">Save changes</button>
-      </div>
+        <button type="submit" class="btn btn-primary" >Create</button>
+        </div>
       </form>
     </div>
   </div>
@@ -144,6 +145,10 @@
 @section('admin-js-script')
 
 <script>
+
+  function continuous(){
+    alert("Hello");
+  }
 
 
 </script>

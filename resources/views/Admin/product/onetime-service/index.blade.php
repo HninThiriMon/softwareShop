@@ -12,14 +12,11 @@
 @endsection
 @section('admin-content')
 
-<div class="callout ">
-        <a href="{{url('')}}" >
-            <button type="button" class="btn btn-info btn-lg" >
-                Create Product
-            </button>
-        </a>
-
-</div>
+<div class="callout">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Create Product
+      </button>
+  </div>
 
 
 
@@ -98,4 +95,61 @@
           <!-- /.box -->
 
 
+
+
+<!--Start Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+      <!-- <form action="{{url('continuous_service/create')}}" method="post"> -->
+      <!-- @csrf -->
+      name<input type="text" name="name"  />
+      price_per_month<input type="text" name="price_per_unit"  />
+      description<input type="text" name="description"  />
+
+     
+
+ 
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" id="continuous_service_create">Create</button>
+      </div>
+      <!-- </form> -->
+    </div>
+  </div>
+
+</div>
+<!--End Modal -->
+
 @endsection
+
+@section('admin-js-script')
+
+@stop
+
+@section('admin-js-script')
+
+<script>
+
+$( "#continuous-service-create" ).click(function() {
+  alert( "Handler for .click() called." );
+  console.log("continuous-service-create");
+});
+
+</script>
+@stop
