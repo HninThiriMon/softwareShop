@@ -16,7 +16,7 @@ class CreateUserHasRolesTable extends Migration
         Schema::create('user_has_roles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamp('role_start_time');
-            $table->timestamp('role_end_time');
+            $table->timestamp('role_end_time')->nullable();
             $table->integer('user_account_id');
             $table->integer('role_id');
             $table->timestamps();
