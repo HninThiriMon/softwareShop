@@ -17,6 +17,7 @@ class CreateContinuousServicesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('price_per_unit')->nullable();
+            $table->string('description');
             $table->string('basic_unit')->nullable();
             $table->integer('tax_percentage')->nullable();
             $table->boolean('active_for_sale')->default(0);

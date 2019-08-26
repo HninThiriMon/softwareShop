@@ -4,6 +4,8 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\Repository;
+// use App\
 
 class ServiceController extends Controller
 {
@@ -19,6 +21,17 @@ class ServiceController extends Controller
         return view('Admin.product.continuous-service.index');
    }
     
-   
+   public function continuousServiceCreate()
+   {
+     dd("continuousServiceCreate");
+
+
+
+
+
+
+
+     return view('Admin.product.continuous-service.index');
+   }
 
 }
