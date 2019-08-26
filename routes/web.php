@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -31,14 +32,43 @@ Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], f
 });
 
 
+// Frontend
+
+Route::get('/', function () {
+    return view('frontend.home');
+});
+
+Route::get('/login', function () {
+    return view('frontend.login');
+});
+
+
+Route::get('/register', function () {
+    return view('frontend.register');
+});
+
+Route::get('/welcome', function () {
+    return view('frontend.welcome');
+});
+
+Route::get('/thank', function () {
+    return view('frontend.thank');
+});
+
+Route::get('/product-list', function () {
+    return view('frontend.product-list');
+});
+
+Route::get('/package-list', function () {
+    return view('frontend.package-list');
+});
+
+
                         
 // Route::get('test', function () {
     // return "hello";
     // return view('Admin/layout/master');
 // });
-
-
-
 
 
 
