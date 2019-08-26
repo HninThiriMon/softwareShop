@@ -1,0 +1,103 @@
+.user__login {
+
+	padding: 2em;
+
+	button.user__login--close {
+		padding: 0.5em 1em;
+
+		span {
+			font-size: 1.5em;
+		}
+	}
+	
+    .login__input {
+    	padding:  3em;
+
+    	h2 {
+			text-align: center;
+			text-transform: uppercase;
+
+		}
+
+		form {
+			padding-top: 1em;
+		}
+
+    	input {
+		    border: none;
+		    width: 100%;
+		    background: #ddd;
+		    border-radius: 0;
+		}
+
+		input::placeholder {
+			color: $fifth-color;
+		}
+
+		a {
+			float: right;
+			color: $secondary-color;
+			font-weight: $font-weight;
+		}
+		
+		p {
+			text-align: center;
+
+			a {
+				float: none;
+				color: $primary-color;
+				font-weight: $font-weight;
+			}
+		}
+		.btn {
+			background: $primary-color;
+		}
+
+		.btn:hover {
+			@extend %primary_btn_hover;
+		}
+    }
+	
+} 
+// User Login & Register
+
+
+.welcome {
+	background: $third-color;
+
+	div {
+		margin: 2em 3em;
+    	box-shadow: 10px 10px 5px rgba(171, 171, 171, 0.65);
+    	background: $fifth-color;
+    	padding: 3em;
+
+    	h2 {
+			font-weight: 700;
+			text-align: $text-align-center;
+			margin-bottom: 1em;
+		}
+
+		p {
+			padding: 0 2em;
+			text-align: $text-align-center;
+			line-height: 2em;
+			
+		}
+
+		span {
+			color: $secondary-color;
+		}
+
+		.welcome__guide {
+			color: $secondary-color;
+			display: block;
+			text-align: center;
+		}
+
+
+		.welcome__btn {
+			@extend %view-more-btn;
+		}
+	}
+
+}
