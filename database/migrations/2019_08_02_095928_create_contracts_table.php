@@ -15,7 +15,7 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('insert_time');
+            $table->timestamp('insert_time')->nullable();
             $table->integer('client_id');
             $table->integer('sale_id');
             $table->string('VAT');

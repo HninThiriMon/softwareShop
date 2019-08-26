@@ -103,33 +103,55 @@
 
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-
+    <div class="well well bs-compnent">
+    <legend>
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+       <h3 class="modal-title" id="exampleModalLabel">Long Term Service Product Create Form</h3>
       </div>
-
+      </legend>
       <div class="modal-body">
         
-      <form action="" id="csp">
-      @csrf
-      name<input type="text" name="name"  />
-      price_per_month<input type="text" name="price_per_unit"  />
-      description<input type="text" name="description"  />
-
+      <form>
      
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" name="name" id="" required>
+        </div>
+        <div class="form-group">
+            <label for="price_per_month">Price Per Month</label>
+            <input type="text" class="form-control" name="price_per_month" id="" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Currency</label>
+            
+            <input type="text" class="form-control" name="basic_unit" id="" palceholder="MMK/USD" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" name="description" id="" cols="20" rows="5" required></textarea>
+        </div>
+        
+        
+
+        <div class="clearfix"></div>
+  
+
 
  
 
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" >Create</button>
-        </div>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" class="continuousServiceCreate">Create</button>
+      </div>
       </form>
+</div>
+
     </div>
   </div>
 
@@ -143,13 +165,28 @@
 @stop
 
 @section('admin-js-script')
+ 
+ <script>
 
-<script>
-
-  function continuous(){
-    alert("Hello");
-  }
-
+ $( ".continuousServiceCreate" ).click(function() {
+  alert("hello");
+  console.log("hello");
+	var name = $(".name").val();
+  // var name = $(".name").val();
+  // var name = $(".name").val();
+  // var name = $(".name").val();
+  alert(name);
+	var data = {
+				'_token' : "{{ csrf_token() }}",
+				'name' : name
+			};
+	// 	$.post( "{{url('bkp/continuous_service/create')}}", data)
+	// 		.done(function( data ) {
+	// 			console.log(data);
+			
+	// 		});
+	// }
+  });
 
 </script>
 @stop
