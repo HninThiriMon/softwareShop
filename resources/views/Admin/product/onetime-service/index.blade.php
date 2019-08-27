@@ -138,9 +138,6 @@
 
 @endsection
 
-@section('admin-js-script')
-
-@stop
 
 @section('admin-js-script')
 

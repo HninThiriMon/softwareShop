@@ -28,15 +28,18 @@ Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], f
     Route::get('onetime_service','ServiceController@onetimeService');
     Route::get('continuous_service','ServiceController@continuousService');
     Route::post('continuous_service/create','ServiceController@continuousServiceCreate');
+    Route::get('continuous_service/show','ServiceController@continuousServiceShow');
 
-});
+  });
 
+Route::resource('dtable-posts', 'dtable\OneTimeServiceAjaxCrudController');
+Route::get('dtable-posts/destroy/{id}', 'dtable\OneTimeServiceAjaxCrudController@destroy');
 
 // Frontend
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+// Route::get('/', function () {
+//     return view('frontend.home');
+// });
 
 Route::get('/login', function () {
     return view('frontend.login');
@@ -65,10 +68,9 @@ Route::get('/package-list', function () {
 
 
                         
-// Route::get('test', function () {
-    // return "hello";
-    // return view('Admin/layout/master');
-// });
+Route::get('test', function () {
+    return view('test');
+});
 
 
 
