@@ -19,7 +19,7 @@
 
 
 	<div class="product__list">
-		<div class="available-products">
+		<div class="container available-products">
 			<div class="row product">
 				<h2></h2>
 				<div class="col-md-4 col-lg-4">

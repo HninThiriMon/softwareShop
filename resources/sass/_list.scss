@@ -36,9 +36,39 @@
 // Crumb
 
 .product__list {
+	margin-bottom: 2em;
+
 	.available-products {
 		background: $fifth-color;
+		
+		.product {
+			padding: 1em 0;
+
+			.product__item {
+				border-bottom: 1px solid #d6d6d6;
+				margin: 0;
+				padding-bottom: 1em;
+			}
+		}
+		
 	}
+}
+
+.package_list {
+	margin-bottom: 3em;
+	.packages {
+		background: $fifth-color;
+
+		.package {
+			padding: 0;
+		}
+
+		.package__item {
+			box-shadow: 0px 0px 10px 0px rgba(138,135,138,0.8);	
+		}
+	}
+
+
 }
 
 // Pagination

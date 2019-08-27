@@ -1,14 +1,11 @@
-
 @extends('frontend.layouts.master')
 
 @section('title','product')
 @section('content')
 
-	<div class="container-fluid">
-		  
-
-		@include('frontend.layouts.main-slider')
-
+	@include('frontend.layouts.main-slider')
+	
+	<div class="container">
 		<div class="row content">
 			<h2>What We Do</h2>
 			<p>
@@ -35,143 +32,148 @@
 	</div>
 
 	<div class="available-products">
+		<div class="container">
 			<div class="row product">
-			<h2>Product Available</h2>
-			<div class="col-md-4 col-lg-4">
-				<div class="row product__item">
-					<div class="col-lg-3 col-md-3">
-						<div class="product__item--number">
-							1
+				<h2>Product Available</h2>
+				<div class="col-md-4 col-lg-4">
+					<div class="row product__item">
+						<div class="col-lg-3 col-md-3">
+							<div class="product__item--number">
+								1
+							</div>
 						</div>
-					</div>
 
-					<div class="col-lg-9 col-md-9">
-						<h4>Product One</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
-					</div>
-				
-				</div>
-				
-			</div>
-
-			<div class="col-md-4 col-lg-4">
-				<div class="row product__item">
-					<div class="col-lg-3 col-md-3">
-						<div class="product__item--number">
-							2
+						<div class="col-lg-9 col-md-9">
+							<h4>Product One</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-list') }}">MORE</a></p>
 						</div>
+					
 					</div>
-
-					<div class="col-lg-9 col-md-9">
-						<h4>Product Two</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
-					</div>
-				
+					
 				</div>
-				
-			</div>
 
-			<div class="col-md-4 col-lg-4">
-				<div class="row product__item">
-					<div class="col-lg-3 col-md-3">
-						<div class="product__item--number">
-							3
+				<div class="col-md-4 col-lg-4">
+					<div class="row product__item">
+						<div class="col-lg-3 col-md-3">
+							<div class="product__item--number">
+								2
+							</div>
 						</div>
-					</div>
 
-					<div class="col-lg-9 col-md-9">
-						<h4>Product Three</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+						<div class="col-lg-9 col-md-9">
+							<h4>Product Two</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-list') }}">MORE</a></p>
+						</div>
+					
 					</div>
-				
+					
 				</div>
-				
-			</div>
-			</div>
 
-			<a href="#" class="products__btn">View More</a> 
-	</div><!--available-products-->
+				<div class="col-md-4 col-lg-4">
+					<div class="row product__item">
+						<div class="col-lg-3 col-md-3">
+							<div class="product__item--number">
+								3
+							</div>
+						</div>
+
+						<div class="col-lg-9 col-md-9">
+							<h4>Product Three</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-list') }}">MORE</a></p>
+						</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			
+			<a href="{{ url('/product-list') }}" class="products__btn">View More</a> 
+			
+		</div><!--available-products-->
+	</div>
 
 
 	<div class="packages">
-		<div class="row package">
-			<h2>Product Package</h2>
-			<div class="col-md-4 col-lg-4">
-				<div class="package__item">
-					<div class="package__img">
-						<img src="/images/blog_5.jpg">
-					</div>
-					
-					<div class="package__title">
-						<h3>Product Name</h3>
-						<div class="package__price">
-							<sup>$</sup>
-							755
+		<div class="container">
+			<div class="row package">
+				<h2>Product Package</h2>
+				<div class="col-md-4 col-lg-4">
+					<div class="package__item">
+						<div class="package__img">
+							<img src="/images/blog_5.jpg">
 						</div>
-						<small>Per Year</small>
-					</div>
-					<div class="package__body">
-
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 						
+						<div class="package__title">
+							<h4>Product Name</h4>
+							<div class="package__price">
+								<sup>$</sup>
+								755
+							</div>
+							<small>Per Year</small>
+						</div>
+						<div class="package__body">
 
-						<a href="#" class="package__btn">View More</a> 
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							
 
+							<a href="{{ url('/package-list') }}" class="package__btn">View More</a> 
+
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-lg-4">
-				<div class="package__item">
-					<div class="package__img">
-						<img src="/images/blog_5.jpg">
-					</div>
-					
-					<div class="package__title">
-						<h3>Product Name</h3>
-						<div class="package__price">
-							<sup>$</sup>
-							755
+				<div class="col-md-4 col-lg-4">
+					<div class="package__item">
+						<div class="package__img">
+							<img src="/images/blog_5.jpg">
 						</div>
-						<small>Per Year</small>
-					</div>
-					<div class="package__body">
-
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 						
+						<div class="package__title">
+							<h4>Product Name</h4>
+							<div class="package__price">
+								<sup>$</sup>
+								755
+							</div>
+							<small>Per Year</small>
+						</div>
+						<div class="package__body">
 
-						<a href="#" class="package__btn">View More</a> 
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							
 
+							<a href="{{ url('/package-list') }}" class="package__btn">View More</a> 
+
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-lg-4">
-				<div class="package__item">
-					<div class="package__img">
-						<img src="/images/blog_5.jpg">
-					</div>
-
-
-					
-					<div class="package__title">
-						<h3>Product Name</h3>
-						<div class="package__price">
-							<sup>$</sup>
-							755
+				<div class="col-md-4 col-lg-4">
+					<div class="package__item">
+						<div class="package__img">
+							<img src="/images/blog_5.jpg">
 						</div>
-						<small>Per Year</small>
-					</div>
-					<div class="package__body">
 
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
 						
+						<div class="package__title">
+							<h4>Product Name</h4>
+							<div class="package__price">
+								<sup>$</sup>
+								755
+							</div>
+							<small>Per Year</small>
+						</div>
+						<div class="package__body">
 
-						<a href="#" class="package__btn">View More</a> 
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							
 
+							<a href="{{ url('/package-list') }}" class="package__btn">View More</a> 
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -179,95 +181,98 @@
 	</div><!--packages-->
 
 
-	<div class="starting">
-		<h2>Get Started Now</h2>
-		<div class="row">
-			<div class="col-md-6 col-lg-6">
-				<a href="#" class="starting__btn-primary">
-					SIGN IN
-				</a>
-			</div>
+	<div class="container">
+		<div class="starting">
+			<h2>Get Started Now</h2>
+			<div class="row">
+				<div class="col-md-6 col-lg-6">
+					<a href="{{ url('/login') }}" class="starting__btn-primary">
+						SIGN IN
+					</a>
+				</div>
 
-			<div class="col-md-6 col-lg-6">
-				<a href="#" class="starting__btn-secondary">
-					REGISTER
-				</a>
+				<div class="col-md-6 col-lg-6">
+					<a href="{{ url('/register') }}" class="starting__btn-secondary">
+						REGISTER
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
+	
+	<div class="client">
+		<div class="container">
+			<h2>Our Clients</h2>
+			<div class="client__slider">
+				
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client.webp">
+					</div>
+				</a>
+				
 
-	<div class="row client">
-		<h2>Our Clients</h2>
-		<div class="client__slider">
-			
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client.webp">
-				</div>
-			</a>
-			
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client1.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client1.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client2.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client2.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client3.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client3.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client4.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client4.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client5.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client5.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client6.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client6.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client7.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client7.webp">
-				</div>
-			</a>
+				<a href="#">
+					<div class="client__img">
+						<img src="/images/client8.webp">
+					</div>
+				</a>
 
-			<a href="#">
-				<div class="client__img">
-					<img src="/images/client8.webp">
-				</div>
-			</a>
+			</div>
 
 		</div>
-
 	</div>
 
 
 	<!-- Modal Box Login -->
 	<!--login.scss-->
 
-	<div class="modal fade" id="login" role="dialog">
+	<!-- <div class="modal fade" id="login" role="dialog">
 		
 		<div class="modal-dialog">
 		    <div class="user__login">
-		      <!-- Modal content-->
 		        <div class="modal-content">
 		       
 		        	<button type="button" class="close user__login--close" data-dismiss="modal">
@@ -311,7 +316,7 @@
 		    </div>
 		</div>
 
-  	</div>
+  	</div> -->
 
 
   	<!-- Modal Box Register -->
@@ -321,7 +326,6 @@
 		
 		<div class="modal-dialog">
 		    <div class="user__login">
-		      <!-- Modal content-->
 		        <div class="modal-content">
 		       
 		        	<button type="button" class="close user__login--close" data-dismiss="modal">
@@ -374,6 +378,6 @@
 		</div>
 		
   	</div>
-@stop
+@endsection
 <!--home.scss-->
 

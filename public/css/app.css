@@ -8,9 +8,10 @@
 .available-products .product h2,
 .content h2 {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   text-transform: uppercase;
-  margin: 2em 0;
+  margin-top: 0;
+  font-weight: 700;
 }
 
 .welcome div .welcome__btn,
@@ -27,7 +28,7 @@
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
-  margin-top: 1em;
+  margin-bottom: 3em;
 }
 
 .starting .starting__btn-secondary,
@@ -40,7 +41,7 @@
   margin-top: 1em;
 }
 
-.user__login .login__input .btn:hover,
+.login .login__input .btn:hover,
 .starting .starting__btn-primary:hover {
   background: #316324;
 }
@@ -74,7 +75,7 @@ body a:hover {
 }
 
 .topbar {
-  padding: 1em 4em 1em 4em;
+  padding: 1em 0em;
   background: #333;
 }
 
@@ -98,7 +99,7 @@ body a:hover {
 }
 
 .header {
-  padding: 1em 4em 1em 4em;
+  padding: 1em 0em;
   background: #fff;
   line-height: 53px;
 }
@@ -199,20 +200,15 @@ body a:hover {
 }
 
 .content {
-  padding: 0em 3em 5em 3em;
+  padding: 3em 0em;
 }
 
 .available-products {
   background: #f5f5f5;
-  padding-bottom: 5em;
 }
 
 .available-products .product {
-  padding: 1em 4em 1em 4em;
-}
-
-.available-products .product .product__item {
-  cursor: pointer;
+  padding: 3em 0em;
 }
 
 .available-products .product .product__item:hover .product__item--number {
@@ -245,11 +241,10 @@ body a:hover {
 
 .packages {
   background: #71b85f;
-  padding-bottom: 5em;
 }
 
 .packages .package {
-  padding: 1em 5em;
+  padding: 3em 0em;
 }
 
 .packages .package .package__item {
@@ -259,11 +254,11 @@ body a:hover {
   border-radius: 1em;
   margin: 0 1em;
   transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  box-shadow: 10px 10px 5px rgba(94, 94, 94, 0.65);
+  box-shadow: 10px 10px 5px rgba(12, 12, 12, 0.26);
 }
 
 .packages .package .package__item:hover .package__img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 }
 
@@ -280,8 +275,8 @@ body a:hover {
 }
 
 .packages .package .package__img img {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   padding: 8px;
   background: #71b85f;
@@ -294,7 +289,7 @@ body a:hover {
 
 .packages .package .package__title .package__price {
   color: #db9c70;
-  font-size: 170%;
+  font-size: 150%;
 }
 
 .packages .package .package__title .package__price sup {
@@ -305,8 +300,12 @@ body a:hover {
   margin-top: 1em;
 }
 
+.packages .package .package__body a {
+  margin-bottom: 0em;
+}
+
 .starting {
-  padding-bottom: 5em;
+  padding: 3em 0em;
 }
 
 .starting .starting__btn-primary {
@@ -320,17 +319,18 @@ body a:hover {
 
 .footer {
   background: #333;
-  padding: 2em 3em;
+  padding: 3em 0em;
   color: #fff;
 }
 
-.footer h3 {
+.footer h4 {
   font-weight: 700;
   margin-bottom: 1.5em;
+  font-size: 20px;
 }
 
 .footer .social_icons {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   border-bottom: 1px solid #fbfbfb36;
 }
 
@@ -341,7 +341,7 @@ body a:hover {
 }
 
 .footer .address {
-  padding-top: 1.5em;
+  padding-top: 1em;
 }
 
 .footer .address i {
@@ -364,16 +364,13 @@ body a:hover {
 
 .client {
   background: #f5f5f5;
-}
-
-.client .client__slider {
-  padding: 0 2em 3em 2em;
+  padding: 3em 0em;
 }
 
 .copyright {
   background: #555;
   text-align: center;
-  padding: 1em;
+  padding: 1em 0em;
   color: #fff;
 }
 
@@ -387,85 +384,97 @@ body a:hover {
   overflow: visible;
 }
 
-.user__login {
-  padding: 2em;
+.login {
+  background: #f5f5f5;
 }
 
-.user__login button.user__login--close {
+.login .container {
+  display: flex;
+  justify-content: center;
+}
+
+.login .user__login {
+  background: #fff;
+  box-shadow: 10px 10px 5px rgba(12, 12, 12, 0.26);
+  width: 500px;
+  margin: 3em 0em;
+}
+
+.login .user__login button.user__login--close {
   padding: 0.5em 1em;
 }
 
-.user__login button.user__login--close span {
+.login .user__login button.user__login--close span {
   font-size: 1.5em;
 }
 
-.user__login .login__input {
+.login .login__input {
   padding: 3em;
 }
 
-.user__login .login__input h2 {
+.login .login__input h2 {
   text-align: center;
   text-transform: uppercase;
 }
 
-.user__login .login__input form {
+.login .login__input form {
   padding-top: 1em;
 }
 
-.user__login .login__input input {
+.login .login__input input {
   border: none;
   width: 100%;
   background: #ddd;
   border-radius: 0;
 }
 
-.user__login .login__input input::-webkit-input-placeholder {
+.login .login__input input::-webkit-input-placeholder {
   color: #fff;
 }
 
-.user__login .login__input input::-moz-placeholder {
+.login .login__input input::-moz-placeholder {
   color: #fff;
 }
 
-.user__login .login__input input:-ms-input-placeholder {
+.login .login__input input:-ms-input-placeholder {
   color: #fff;
 }
 
-.user__login .login__input input::-ms-input-placeholder {
+.login .login__input input::-ms-input-placeholder {
   color: #fff;
 }
 
-.user__login .login__input input::placeholder {
+.login .login__input input::placeholder {
   color: #fff;
 }
 
-.user__login .login__input a {
+.login .login__input a {
   float: right;
   color: #db9c70;
   font-weight: 700;
 }
 
-.user__login .login__input p {
+.login .login__input p {
   text-align: center;
 }
 
-.user__login .login__input p a {
+.login .login__input p a {
   float: none;
   color: #71b85f;
   font-weight: 700;
 }
 
-.user__login .login__input .btn {
+.login .login__input .btn {
   background: #71b85f;
 }
 
 .welcome {
   background: #f5f5f5;
+  padding: 3em 0em;
 }
 
 .welcome div {
-  margin: 2em 3em;
-  box-shadow: 10px 10px 5px rgba(171, 171, 171, 0.65);
+  box-shadow: 10px 10px 5px rgba(12, 12, 12, 0.26);
   background: #fff;
   padding: 3em;
 }
@@ -526,8 +535,38 @@ body a:hover {
   display: inline-block;
 }
 
+.product__list {
+  margin-bottom: 2em;
+}
+
 .product__list .available-products {
   background: #fff;
+}
+
+.product__list .available-products .product {
+  padding: 1em 0;
+}
+
+.product__list .available-products .product .product__item {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.package_list {
+  margin-bottom: 3em;
+}
+
+.package_list .packages {
+  background: #fff;
+}
+
+.package_list .packages .package {
+  padding: 0;
+}
+
+.package_list .packages .package__item {
+  box-shadow: 0px 0px 10px 0px rgba(138, 135, 138, 0.8);
 }
 
 .paginate {

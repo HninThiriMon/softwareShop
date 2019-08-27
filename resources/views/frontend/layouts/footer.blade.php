@@ -1,7 +1,8 @@
 <footer class="footer">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-3">
-				<h3>OUR COMPANY</h3>
+				<h4>OUR COMPANY</h4>
 				<ul>
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">FAQ</a></li>
@@ -13,7 +14,7 @@
 			</div>
 
 			<div class="col-lg-3 col-md-3">
-				<h3>PRODUCTS</h3>
+				<h4>PRODUCTS</h4>
 				<ul>
 					<li><a href="#">Lorem Ipsum</a></li>
 					<li><a href="#">Lorem Ipsum</a></li>
@@ -26,7 +27,7 @@
 
 
 			<div class="col-lg-3 col-md-3">
-				<h3>QUICK LINK</h3>
+				<h4>QUICK LINK</h4>
 				<ul>
 					<li><a href="#">Lorem Ipsum Dolar Site</a></li>
 					<li><a href="#">Lorem Ipsum Dolar Site</a></li>
@@ -38,7 +39,7 @@
 			</div>
 
 			<div class="col-lg-3 col-md-3">
-				<h3>Contact</h3>
+				<h4>Contact</h4>
 				
 				<div class="social_icons">
 					<a href="">
@@ -74,6 +75,7 @@
 				
 			</div>
 		</div>
+	</div>
 </footer>
 
 <div class="copyright">

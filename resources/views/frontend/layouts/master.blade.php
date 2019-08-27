@@ -16,6 +16,7 @@
 		<link href="{{ asset('css/frontend/animate.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/flexslider.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/slickslider.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/frontend/slick-theme.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/square/green.css') }}" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -70,12 +71,12 @@
 				});
 
 				$('.client__slider').slick({
-	        		slidesToShow: 7,
-	        		slidesToScroll: 1,
+	        		slidesToShow: 6,
+	        		slidesToScroll: 3,
 	        		autoplay: true,
 	        		autoplaySpeed: 1500,
 	        		arrows: false,
-	        		dots: false,
+	        		dots: true,
 	        		loop: false,
 	        		pauseOnHover: false,
 			        responsive: [{

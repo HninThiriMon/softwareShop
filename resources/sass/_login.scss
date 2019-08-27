@@ -1,14 +1,25 @@
-.user__login {
+.login {
+	background: $third-color;
 
-	padding: 2em;
-
-	button.user__login--close {
-		padding: 0.5em 1em;
-
-		span {
-			font-size: 1.5em;
-		}
+	.container {
+		display: flex;
+		justify-content: center;
 	}
+	.user__login {
+
+		background: $fifth-color;
+	    box-shadow: 10px 10px 5px rgba(12, 12, 12, 0.26);
+	    width: 500px;
+	    margin: $primary-padding;
+
+		button.user__login--close {
+			padding: 0.5em 1em;
+
+			span {
+				font-size: 1.5em;
+			}
+	}
+}
 	
     .login__input {
     	padding:  3em;
@@ -64,10 +75,11 @@
 
 .welcome {
 	background: $third-color;
+	padding: 3em 0em;
 
 	div {
-		margin: 2em 3em;
-    	box-shadow: 10px 10px 5px rgba(171, 171, 171, 0.65);
+		
+    	box-shadow: 10px 10px 5px rgba(12, 12, 12, 0.26);
     	background: $fifth-color;
     	padding: 3em;
 
