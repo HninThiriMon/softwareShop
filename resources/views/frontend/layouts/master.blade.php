@@ -18,6 +18,8 @@
 		<link href="{{ asset('css/frontend/slickslider.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/slick-theme.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/square/green.css') }}" rel="stylesheet">
+		<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+
 		
 
 
@@ -54,6 +56,7 @@
 		<script src="js/frontend/active.js"></script>
 		<script src="js/frontend/icheck.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 		<script type="text/javascript">
 			$(document).ready(function(){
 
@@ -101,6 +104,8 @@
     				radioClass: 'iradio_square-green',
     				increaseArea: '20%' // optional
   				});
+
+  				
 
   			});
 		</script>

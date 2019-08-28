@@ -712,3 +712,27 @@ body a:hover {
   float: left;
 }
 
+.product-detail .buy-now {
+  text-align: center;
+  padding: 0 3em;
+  padding: #f5f5f5;
+}
+
+.product-detail .buy-now .buy-product__date-input {
+  padding: 2em 0;
+}
+
+.product-detail .buy-now input#start-date,
+.product-detail .buy-now input#end-date {
+  background: none;
+  margin-bottom: 2em;
+  font-weight: 300;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #86b66f;
+  transition: all 0.2s ease;
+  outline: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+

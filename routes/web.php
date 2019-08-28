@@ -13,8 +13,8 @@
 
 
 Route::get('/', function () {
-    return view('home');
-});
+   return view('home');
+ });
 Route::get('user/register','Auth\RegisterController@show');
 Route::post('user/register','Auth\RegisterController@register');
 Route::get('user/logout','Auth\LoginController@logout');
@@ -37,9 +37,9 @@ Route::get('dtable-posts/destroy/{id}', 'dtable\OneTimeServiceAjaxCrudController
 
 // Frontend
 
-// Route::get('/', function () {
-//     return view('frontend.home');
-// });
+Route::get('/', function () {
+    return view('frontend.home');
+});
 
 Route::get('/login', function () {
     return view('frontend.login');
