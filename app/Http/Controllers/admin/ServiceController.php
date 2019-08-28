@@ -25,9 +25,45 @@ class ServiceController extends Controller
    public function continuousService()
    {
     
-     return view('Admin.product.continuous-service.index');
+     $continuousServices = ContinuousService::all();
+
+     return view('Admin.product.continuous-service.index',compact('continuousServices'));
+
    }
     
+   public function continuousServiceEdit(Request $request)
+   {
+     $continuousService = ContinuousService::findOrFail($request->id);
+       return $continuousService;
+   }
+
+   public function continuousServiceUpdate(Request $request)
+   {
+
+     // return $request->all();
+
+     // $this->validate($request, [
+     //      'id' => 'required',
+     //      'name' => 'required',
+     //      'price_per_unit' => 'required',
+     //      'basic_unit' => 'required',
+     //      'default_automatic_prolongation_period' => 'required',
+     //      'description' => 'required',
+         
+     //  ]);
+      $id = $request->id;
+
+      $this->model->update($request->only($this->model->getModel()->fillable), $id);
+
+      return $this->model->find($id);
+
+   }
+
+   public function continuousServiceDestroy($id)
+   {
+       return $this->model->delete($id);
+   }
+
    public function continuousServiceCreate(Request $request)
    {
      
