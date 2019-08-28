@@ -44,18 +44,23 @@
 
               @foreach($continuousServices as $continuousService)
               <tr>
+              
                   <td>{{$continuousService->name}}</td>
                   <td>{{$continuousService->description}}</td>
                   <td>{{$continuousService->price_per_unit}}</td>
                   <td>{{$continuousService->basic_unit}}</td>
                   <td>{{$continuousService->default_automatic_prolongation_period}}</td>
                   <td>
-                  <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$continuousService->id}}" id="editContinuousService" class="edit btn btn-success">Edit</a>
+                  <a href="" data-toggle="modal" data-target="#editModal" id="{{$continuousService->id}}" class="edit btn btn-success" onClick="editContinuousService(this.id)">Edit</a>
                   &nbsp;&nbsp;
-                  <a href="" id="delete-post" data-toggle="tooltip" data-original-title="Delete" data-id="{{$continuousService->id}}" class="delete btn btn-danger">Delete</a>
+                  <a href="{{url('bkp/deleteContinuousService/'.$continuousService->id)}}" data-toggle="tooltip" data-original-title="Delete" class="delete btn btn-danger">Delete</a>
+                
+
+
+
+
                   </td>
-
-
+                  
                 </tr>
 
 
@@ -267,14 +272,13 @@ $('#submitCustomer').on('click', function () {
     });
 
 
-
-    $('#editContinuousService').on('click', function () {
-      var id = $(this).attr("data-id");
-      var data = {
+    function editContinuousService(id)
+      {
+        var data = {
         'id' : id ,
        };
 
-      $.get( "{{url('bkp/continuous_service/edit')}}",data)
+      $.get( "{{url('bkp/continuous_service/edit')}}", data )
       .done(function( data ) {
         $('#edit_name').val(data.name);
         $('#edit_price_per_month').val(data.price_per_unit);
@@ -283,8 +287,27 @@ $('#submitCustomer').on('click', function () {
         $('#edit_default_automatic_prolongation_period').val(data.default_automatic_prolongation_period);
         $('#updateC_id').val(data.id);
       });
+    }
 
-    });
+    // function deleteContinuousService(id)
+    //   {
+        
+    //     var data = {
+    //     'id' : id ,
+    //    };
+    //    $.get( "{{url('bkp/continuous_service/delete')}}",data )
+    //   .done(function( data ) {
+
+    //     alert(data);
+    //     console.log(data);
+
+    //   });
+
+    //   }
+
+
+
+
 
     $('#updateContinuousService').on('click', function () {
         var update_id = $('#updateC_id').val();
