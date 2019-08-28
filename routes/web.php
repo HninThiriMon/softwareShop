@@ -19,9 +19,7 @@ Route::post('user/register','Auth\RegisterController@register');
 Route::get('user/logout','Auth\LoginController@logout');
 Route::get('user/login','Auth\LoginController@show');
 Route::post('user/login','Auth\LoginController@login')->name('login');
-
 Route::get('package-list','ProductController@productList');
-
 
 
 Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], function () {
@@ -56,6 +54,38 @@ Route::get('/register', function () {
     return view('frontend.register');
 });
 
+
+// Route::get('/product-list', function () {
+//     return view('frontend.product-list');
+// });
+Route::get('/product-list', function () {
+    return view('frontend.product-list');
+});
+
+Route::get('/product-detail', function () {
+    return view('frontend.product-detail');
+});
+
+// Route::get('/package-list', function () {
+//     return view('frontend.package-list');
+// });
+
+Route::get('/sitemap', function () {
+    return view('frontend.sitemap');
+});
+
+Route::get('/privacy-policy', function () {
+    return view('frontend.privacy-policy');
+});
+
+Route::get('/faq', function () {
+    return view('frontend.faq');
+});
+
+Route::get('/terms-of-use', function () {
+    return view('frontend.terms-of-use');
+});
+
 Route::get('/welcome', function () {
     return view('frontend.welcome');
 });
@@ -64,9 +94,7 @@ Route::get('/thank', function () {
     return view('frontend.thank');
 });
 
-// Route::get('/product-list', function () {
-//     return view('frontend.product-list');
-// });
+
 
 // Route::get('/package-list', function () {
 //     return view('frontend.package-list');

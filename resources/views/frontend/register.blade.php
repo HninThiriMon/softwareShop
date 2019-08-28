@@ -2,6 +2,20 @@
 
 @section('title','product')
 @section('content')
+	<div class="crumb">
+
+		<div class="crumb__img">
+			<img src="/images/bread-crumb.jpg">
+		</div>
+
+		<div class="crumb__content">
+			<div class="crumb__title">
+				<h3>Register</h3>
+			</div>
+		</div>
+			
+	</div>
+
 	<div class="login">
 		<div class="container">
 			<div class="user__login">
