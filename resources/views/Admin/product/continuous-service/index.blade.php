@@ -4,7 +4,6 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
-
 @stop
 @section('content-header')
     <h1>
@@ -23,28 +22,79 @@
       </button>
   </div>
   
-  <table id="example" class="display" width="100%"></table>
+  <!-- /.box -->
+  <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Data Table With Full Features</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Description</th>
+                  <th>Price Per Month</th>
+                  <th>Currency</th>
+                  <th>Prolongation Period</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+              @foreach($continuousServices as $continuousService)
+              <tr>
+                  <td>{{$continuousService->name}}</td>
+                  <td>{{$continuousService->description}}</td>
+                  <td>{{$continuousService->price_per_unit}}</td>
+                  <td>{{$continuousService->basic_unit}}</td>
+                  <td>{{$continuousService->default_automatic_prolongation_period}}</td>
+                  <td>
+                  <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$continuousService->id}}" id="editContinuousService" class="edit btn btn-success">Edit</a>
+                  &nbsp;&nbsp;
+                  <a href="" id="delete-post" data-toggle="tooltip" data-original-title="Delete" data-id="{{$continuousService->id}}" class="delete btn btn-danger">Delete</a>
+                  </td>
 
 
-  <!-- <table class="table table-bordered">
-        <tr>
-            <th>Product Name</th>
-            <th>Price Per Month</th>
-            <th>Currency</th>
-            <th>Prolongation Period</th>
-            <th>Description  </th>
-            <th width="180" class="text-center">Action</th>
-        </tr>
-        <tbody id="tbody">
-
-        </tbody>
-    </table> -->
+                </tr>
 
 
+              @endforeach
+
+                
+               
+            
+                </tbody>
+                <!-- <tfoot>
+                <tr>
+                  <th>Rendering engine</th>
+                  <th>Browser</th>
+                  <th>Platform(s)</th>
+                  <th>Engine version</th>
+                  <th>CSS grade</th>
+                </tr>
+                </tfoot> -->
+              </table>
+            </div>
+            <!-- /.box-body -->
+    </div>
+          <!-- /.box -->
 
 
 
-<!-- Start Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Create Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
 
@@ -60,8 +110,7 @@
       </div>
       </legend>
       <div class="modal-body">
-        
-   
+      
             <form>
                 <div class="form-group">
                     <label for="name" >Product Name</label>
@@ -109,7 +158,80 @@
     </div>
   </div>
 </div>
-<!--End Modal -->
+<!--Create Modal -->
+
+
+
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="well well bs-compnent">
+    <legend>
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+       <h3 class="modal-title" id="exampleModalLabel">Long Term Service Product Create Form</h3>
+      </div>
+      </legend>
+      <div class="modal-body">
+      
+            <form>
+                <div class="form-group">
+                    <label for="name" >Product Name</label>
+                    <input id="edit_name" type="text" class="form-control" name="edit_name" placeholder="Product Name"
+                           required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="edit_price_per_month" >Price Per Month</label>
+                    <input id="edit_price_per_month" type="text" class="form-control" name="edit_price_per_month" placeholder="Price Per Month"
+                           required autofocus>
+                </div>
+                <div class="form-group" mb-2>
+                    <label for="edit_currency" >Currency</label>
+                    <select id="edit_currency">
+                      <option value="MMK">MMK</option>
+                      <option value="USD">USD</option>
+                    </select>
+                </div>
+                <div class="form-group" mx-sm-3 mb-2>
+                <label for="edit_default_automatic_prolongation_period" >Default Automatic Prolongation Period</label>
+                    <select id="edit_default_automatic_prolongation_period">
+                   
+                    <option value="6">6 Month</option>
+                    <option value="16">1 Year</option>
+                    <option value="18">2 Years</option>
+                    <option value="24">3 Years</option>
+                    <option value="30">4 Years</option>
+                    <option value="36">5 Years</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit_description">Description</label>
+                  <textarea class="form-control" name="edit_description" id="edit_description" cols="20" rows="5" required></textarea>
+              </div>
+          <input type="hidden" name="" id="updateC_id">
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" id="updateContinuousService">Update</button>
+      </div>
+      </form>
+</div>
+    </div>
+  </div>
+</div>
+<!--Edit Modal -->
+
+
+
+
+
 
 
 
@@ -119,77 +241,6 @@
 
 @section('admin-js-files')
 <script>
-
-var dataSet = [
-    [ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800" ],
-    [ "Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008/12/13", "$103,600" ],
-    [ "Jena Gaines", "Office Manager", "London", "3814", "2008/12/19", "$90,560" ],
-    [ "Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013/03/03", "$342,000" ],
-    [ "Charde Marshall", "Regional Director", "San Francisco", "6741", "2008/10/16", "$470,600" ],
-    [ "Gloria Little", "Systems Administrator", "New York", "1721", "2009/04/10", "$237,500" ],
-    [ "Bradley Greer", "Software Engineer", "London", "2558", "2012/10/13", "$132,000" ],
-    [ "Gavin Joyce", "Developer", "Edinburgh", "8822", "2010/12/22", "$92,575" ],
-    [ "Jennifer Chang", "Regional Director", "Singapore", "9239", "2010/11/14", "$357,650" ],    
-    [ "Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009/12/09", "$85,675" ]
-];
- 
-$(document).ready(function() {
-    $('#example').DataTable( {
-        data: dataSet,
-        columns: [
-            { title: "Name" },
-            { title: "Position" },
-            { title: "Office" },
-            { title: "Extn." },
-            { title: "Start date" },
-            { title: "Salary" }
-        ]
-    } );
-} );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $.get( "{{url('bkp/continuous_service/show')}}", function( data ) {
-//   alert("Hello");
-//   var htmls = [];
-//         // $.each(value, function (index, value) {
-//         //     if (value) {
-//                 htmls.push('<tr>\
-//         		<td>name </td>\
-//         		<td>email</td>\
-//         		<td><button data-toggle="modal" data-target="#update-modal" class="btn btn-info updateData" data-id="">Update</button>\
-//         		<button data-toggle="modal" data-target="#remove-modal" class="btn btn-danger removeData" data-id="">Delete</button></td>\
-//         	</tr>');
-//             // }
-//             // lastIndex = index;
-//         // });
-//         $('#tbody').html(htmls);
-
-//   // $( "body" )
-//   //   .append( "Name: " + data.name ) // John
-//   //   .append( "Time: " + data.time ); //  2pm
-
-// }, "json" );
-
-
-
-
-
 
 $('#submitCustomer').on('click', function () {
     var name = $('#name').val();
@@ -208,18 +259,59 @@ $('#submitCustomer').on('click', function () {
    };
      $.post( "{{url('bkp/continuous_service/create')}}", data)
     .done(function( data ) {
-        console.log(data);
-        alert( "Data Loaded: " + data );
+        
 
       });
-
-
 //Set
 // $('#txt_name').val(bla);
+    });
 
 
+
+    $('#editContinuousService').on('click', function () {
+      var id = $(this).attr("data-id");
+      var data = {
+        'id' : id ,
+       };
+
+      $.get( "{{url('bkp/continuous_service/edit')}}",data)
+      .done(function( data ) {
+        $('#edit_name').val(data.name);
+        $('#edit_price_per_month').val(data.price_per_unit);
+        $('#edit_description').val(data.description);
+        $('#edit_currency').val(data.basic_unit);
+        $('#edit_default_automatic_prolongation_period').val(data.default_automatic_prolongation_period);
+        $('#updateC_id').val(data.id);
+      });
 
     });
+
+    $('#updateContinuousService').on('click', function () {
+        var update_id = $('#updateC_id').val();
+        var update_name = $('#edit_name').val();
+        var update_price_per_unit = $('#edit_price_per_month').val();
+        var update_description = $('#edit_description').val();
+        var update_basic_unit = $( "#edit_currency" ).val();
+        var update_default_automatic_prolongation_period = $( "#edit_default_automatic_prolongation_period" ).val();
+
+      var data = {
+            '_token' : "{{csrf_token()}}",
+            'id' : update_id ,
+            'name' : update_name ,
+            'price_per_unit' : update_price_per_unit ,
+            'description' : update_description ,
+            'basic_unit' : update_basic_unit ,
+            'default_automatic_prolongation_period' : update_default_automatic_prolongation_period,
+      };
+        $.post( "{{url('bkp/continuous_service/update')}}", data)
+        .done(function( data ) {
+            console.log(data);
+          
+          });
+    
+    });
+
+
 
 
 </script>

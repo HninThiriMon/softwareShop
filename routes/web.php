@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::get('/', function () {
    return view('home');
  });
@@ -20,6 +19,7 @@ Route::post('user/register','Auth\RegisterController@register');
 Route::get('user/logout','Auth\LoginController@logout');
 Route::get('user/login','Auth\LoginController@show');
 Route::post('user/login','Auth\LoginController@login')->name('login');
+Route::get('package-list','ProductController@productList');
 
 
 Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], function () {
@@ -28,6 +28,10 @@ Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], f
     Route::get('onetime_service','ServiceController@onetimeService');
     Route::get('continuous_service','ServiceController@continuousService');
     Route::post('continuous_service/create','ServiceController@continuousServiceCreate');
+    Route::get('continuous_service/edit','ServiceController@continuousServiceEdit');
+    Route::post('continuous_service/update','ServiceController@continuousServiceUpdate');
+    Route::post('continuous_service/delete','ServiceController@continuousServiceDestroy');
+
     Route::get('continuous_service/show','ServiceController@continuousServiceShow');
 
   });
@@ -51,6 +55,9 @@ Route::get('/register', function () {
 });
 
 
+// Route::get('/product-list', function () {
+//     return view('frontend.product-list');
+// });
 Route::get('/product-list', function () {
     return view('frontend.product-list');
 });
@@ -59,9 +66,9 @@ Route::get('/product-detail', function () {
     return view('frontend.product-detail');
 });
 
-Route::get('/package-list', function () {
-    return view('frontend.package-list');
-});
+// Route::get('/package-list', function () {
+//     return view('frontend.package-list');
+// });
 
 Route::get('/sitemap', function () {
     return view('frontend.sitemap');
@@ -89,6 +96,9 @@ Route::get('/thank', function () {
 
 
 
+// Route::get('/package-list', function () {
+//     return view('frontend.package-list');
+// });
                         
 Route::get('test', function () {
     return view('test');

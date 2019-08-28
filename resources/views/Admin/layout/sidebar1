@@ -1,25 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>@yield('admin-title')</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" > -->
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="../admin/css/sidebar.css">
-    @yield('style-files')
-</head>
-
-<body>
-<div class="page-wrapper chiller-theme toggled">
-  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-    <i class="fas fa-bars"></i>
-  </a>
-  <nav id="sidebar" class="sidebar-wrapper">
+<nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
         <a href="#">pro sidebar</a>
@@ -79,6 +58,22 @@
                 </li>
                 <li>
                   <a href="#">Dashboard 3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Products</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="{{url('bkp/continuous_service')}}">Long Term Service</a>
+                </li>
+                <li>
+                  <a href="{{url('bkp/onetime_service')}}">One time Service</a>
                 </li>
               </ul>
             </div>
@@ -213,24 +208,3 @@
       </a>
     </div>
   </nav>
-  <!-- sidebar-wrapper  -->
-  <main class="page-content">
-    <div class="container-fluid">
-     
-      @yield('admin-content')
-    </div>
-
-  </main>
-  <!-- page-content" -->
-</div>
-<!-- page-wrapper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="../admin/js/sidebar.js"></script>
-
-@yield('admin-js-files')
-@yield('admin-js-script')
-</body>
-
-</html>
