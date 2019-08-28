@@ -34,16 +34,16 @@
 		<div class="col-lg-7 col-md-7 header__nav">
 			<ul class="">
 				<li class="header__list">
-					<a href="#" class="header__list--active">Home</a>
+					<a href="{{ url('/') }}" class="header__list--active">Home</a>
 				</li>
 				<li class="header__list">
 					<a href="#">About Us</a>
 				</li>
 				<li class="header__list">
-					<a href="#">Products</a>
+					<a href="{{ url('/product-list') }}">Products</a>
 				</li>
 				<li class="header__list">
-					<a href="#">FAQ</a>
+					<a href="{{ url('/faq') }}">FAQ</a>
 				</li>
 				<li class="header__list">
 					<a href="#">Contact Us</a>

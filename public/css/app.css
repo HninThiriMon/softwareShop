@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);a.header__list--active {
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+a.header__list--active {
   color: #71b85f !important;
 }
 
@@ -12,6 +14,7 @@
   text-transform: uppercase;
   margin-top: 0;
   font-weight: 700;
+  color: #555;
 }
 
 .welcome div .welcome__btn,
@@ -501,6 +504,85 @@ body a:hover {
   text-align: center;
 }
 
+.sitemap .footer {
+  color: #333;
+  background: #fff;
+}
+
+.sitemap .footer h4 {
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 1.5em;
+  color: #555;
+}
+
+.sitemap .footer a {
+  color: #333;
+  cursor: default;
+}
+
+.privacy-policy {
+  padding: 3em 0em;
+}
+
+.privacy-policy .panel-group {
+  margin-bottom: 0;
+}
+
+.privacy-policy .panel-group .panel-default {
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  box-shadow: 0px 0px 10px 0px rgba(138, 135, 138, 0.42);
+  margin-bottom: 1.5em;
+}
+
+.privacy-policy .panel-group .panel-default .panel-heading {
+  background-color: #ffffff;
+  padding: 0em;
+}
+
+.privacy-policy .panel-group .panel-default .panel-heading a {
+  position: relative;
+  padding: 1em;
+  display: block;
+  font-size: 18px;
+}
+
+.privacy-policy .panel-group .panel-default .panel-body {
+  border-top-color: #ddd;
+}
+
+[data-toggle=collapse]:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\F068";
+  transition: all linear 0.25s;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  line-height: 28px;
+}
+
+[data-toggle=collapse]:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #ececec;
+  position: absolute;
+  top: 0;
+  right: 55px;
+}
+
+[data-toggle=collapse].collapsed:after {
+  content: "\F067";
+}
+
 .crumb {
   position: relative;
 }
@@ -533,6 +615,9 @@ body a:hover {
 
 .crumb .crumb__content .crumb__title h3 {
   display: inline-block;
+  border: 1px solid #fff;
+  padding: 1em;
+  text-transform: uppercase;
 }
 
 .product__list {
@@ -604,5 +689,26 @@ body a:hover {
   background: #db9c70;
   color: #fff;
   outline: none;
+}
+
+.product-detail {
+  padding: 3em 0em;
+}
+
+.product-detail .tab-content .tab-pane {
+  width: 100%;
+  height: 300px;
+}
+
+.product-detail .tab-content .tab-pane img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-detail .nav-pills img {
+  width: 20%;
+  padding-top: 1em;
+  padding-right: 1em;
+  float: left;
 }
 

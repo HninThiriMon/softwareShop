@@ -18,6 +18,10 @@
 		<link href="{{ asset('css/frontend/slickslider.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/slick-theme.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/frontend/square/green.css') }}" rel="stylesheet">
+		
+
+
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 

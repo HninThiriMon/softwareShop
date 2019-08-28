@@ -33,7 +33,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product One</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -51,7 +51,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product Two</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -69,7 +69,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product Three</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -89,7 +89,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product One</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -107,7 +107,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product Two</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -125,7 +125,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product Three</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -145,7 +145,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product One</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -163,7 +163,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product Two</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>
@@ -181,7 +181,7 @@
 						<div class="col-lg-9 col-md-9">
 							<h4>Product Three</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore.....<a href="#">MORE</a></p>
+							tempor incididunt ut labore et dolore.....<a href="{{ url('/product-detail')}}">MORE</a></p>
 						</div>
 					
 					</div>

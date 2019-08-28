@@ -38,6 +38,8 @@ $text-align-left: left;
 $text-align-center: center;
 $font-weight: 700;
 $primary-font-size: 16px;
+$primary-font-color: #555;
+$secondary-font-color: #333;
 
 
 // Mixins
@@ -54,6 +56,7 @@ a.header__list--active {
 	text-transform: uppercase;
     margin-top: 0;
     font-weight: 700;
+    color: $primary-font-color;
 }
 
 %view-more-btn {
