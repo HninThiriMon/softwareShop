@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+   return view('home');
+ });
 Route::get('user/register','Auth\RegisterController@show');
 Route::post('user/register','Auth\RegisterController@register');
 Route::get('user/logout','Auth\LoginController@logout');
@@ -24,17 +24,18 @@ Route::get('package-list','ProductController@productList');
 
 Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], function () {
 
-    Route::get('bkp_admin','AccountController@index');
+    Route::get('admin','AccountController@index');
     Route::get('onetime_service','ServiceController@onetimeService');
     Route::get('continuous_service','ServiceController@continuousService');
     Route::post('continuous_service/create','ServiceController@continuousServiceCreate');
     Route::get('continuous_service/edit','ServiceController@continuousServiceEdit');
     Route::post('continuous_service/update','ServiceController@continuousServiceUpdate');
-    Route::post('continuous_service/delete','ServiceController@continuousServiceDestroy');
+    Route::get('deleteContinuousService/{id}','ServiceController@continuousServiceDestroy');
 
     Route::get('continuous_service/show','ServiceController@continuousServiceShow');
 
   });
+// Route::delete('addPortfolio/{id}', 'AddPortfolioController@Destroy')->name('portfolio.destroy');
 
 Route::resource('dtable-posts', 'dtable\OneTimeServiceAjaxCrudController');
 Route::get('dtable-posts/destroy/{id}', 'dtable\OneTimeServiceAjaxCrudController@destroy');

@@ -40,29 +40,46 @@ class ServiceController extends Controller
    public function continuousServiceUpdate(Request $request)
    {
 
-     // return $request->all();
+        $this->validate($request, [
+          'id' => 'required',
+          'name' => 'required',
+          'price_per_unit' => 'required',
+          'basic_unit' => 'required',
+          'default_automatic_prolongation_period' => 'required',
+          'description' => 'required',
+      ]);
+      $continuousService = ContinuousService::findOrFail($request->id);
+      $continuousService->name = $request->name ;
+      $continuousService->price_per_unit = $request->price_per_unit ;
+      $continuousService->basic_unit = $request->basic_unit ;
+      $continuousService->default_automatic_prolongation_period = $request->default_automatic_prolongation_period ;
+      $continuousService->description = $request->description ;
+      $continuousService->save();
 
-     // $this->validate($request, [
-     //      'id' => 'required',
-     //      'name' => 'required',
-     //      'price_per_unit' => 'required',
-     //      'basic_unit' => 'required',
-     //      'default_automatic_prolongation_period' => 'required',
-     //      'description' => 'required',
-         
-     //  ]);
-      $id = $request->id;
-
-      $this->model->update($request->only($this->model->getModel()->fillable), $id);
+      //  $id = $request->id;
+      // $this->model->update($request->only($this->model->getModel()->fillable), $id);
 
       return $this->model->find($id);
 
    }
 
-   public function continuousServiceDestroy($id)
+   public function continuousServiceDestroy( $id )
    {
-       return $this->model->delete($id);
+     
+       ContinuousService::destroy($id);
+
+          return redirect('bkp/continuous_service');
+
    }
+
+  // public function continuousServiceDestroy($id)
+  // {
+  //   if(ContinuousService::destroy($id)) {
+  //     return redirect('addPortfolio')->with('success', 'The image has been successfully deleted!');
+  //   } else {
+  //     return redirect('addPortfolio')->with('error', 'Please try again!');
+  //   }
+  // }
 
    public function continuousServiceCreate(Request $request)
    {

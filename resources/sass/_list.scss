@@ -142,6 +142,29 @@
 		}
 
 	}
+.buy-now {
+		text-align: center;
+		padding: 0 3em;
+		padding: $third-color;
+		
+		.buy-product__date-input {
+			padding: 2em 0;
+		}
+
+		input#start-date,
+		input#end-date{
+		    background: none;
+		    margin-bottom: 2em;
+		    font-weight: 300;
+		    border: none;
+		    font-size: 18px;
+		    border-bottom: 1px solid rgb(134, 182, 111);
+		    transition: all .2s ease;
+		    outline: 0;
+		    border-radius: 0;
+		    box-shadow: none;
+		}
+	}
 }
 
 

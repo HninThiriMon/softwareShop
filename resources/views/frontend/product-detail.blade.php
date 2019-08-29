@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','product')
+
 @section('content')
 <div class="crumb">
 
@@ -81,13 +81,37 @@
 
 			</div><!--col-lg-8 col-md-8-->
 
-			<div class="col-lg-4 col-md-4">
-				
+			<div class="col-lg-4 col-md-4 buy-now">
+				<!-- <p>Alternate Date: <input type = "text" id = "datepicker-4"></p> -->
+				<div class="">
+					<h3>Buy Product</h3>
+					
+					<div class="buy-product__date-input">
+		                <input type='text' class="form-control" id='start-date' required placeholder="Choose Start Date" />
+
+		                <input type='text' class="form-control" id='end-date' required placeholder="Choose End Date" />
+	                </div>
+
+				</div>
+
 			</div><!--col-lg-4 col-md-4-->
 
 		</div>
 	</div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript">
+
+	$("#start-date").datepicker({
+        dateFormat: "MM dd, yy"
+    });
+
+    $("#end-date").datepicker({
+        dateFormat: "MM dd, yy"
+    });
+
+</script>
 
 @endsection
