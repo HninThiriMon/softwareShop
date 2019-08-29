@@ -78,9 +78,9 @@ Route::get('/privacy-policy', function () {
     return view('frontend.privacy-policy');
 });
 
-Route::get('/faq', function () {
-    return view('frontend.faq');
-});
+// Route::get('/faq', function () {
+//     return view('frontend.faq');
+// });
 
 Route::get('/terms-of-use', function () {
     return view('frontend.terms-of-use');
