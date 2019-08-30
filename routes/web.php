@@ -11,16 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-   return view('home');
- });
+// Route::get('/', function () {
+//    return view('home');
+//  });
 Route::get('user/register','Auth\RegisterController@show');
 Route::post('user/register','Auth\RegisterController@register');
 Route::get('user/logout','Auth\LoginController@logout');
 Route::get('user/login','Auth\LoginController@show');
 Route::post('user/login','Auth\LoginController@login')->name('login');
-Route::get('package-list','ProductController@productList');
-
+Route::get('product-list','ProductController@productList');
+Route::get('faq','DashboardController@faq');
+Route::get('/','DashboardController@home');
+Route::get('terms_of_use','DashboardController@termsOfUse');
+Route::get('privacy_policy','DashboardController@privacyPolicy');
 
 Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], function () {
 
@@ -32,6 +35,8 @@ Route::group(['prefix' => 'bkp','namespace'=>'admin','middleware'=>'manager'], f
     Route::post('continuous_service/update','ServiceController@continuousServiceUpdate');
     Route::get('deleteContinuousService/{id}','ServiceController@continuousServiceDestroy');
 
+    Route::get('promotion_package','PromotionController@promotionPackage');
+    
     Route::get('continuous_service/show','ServiceController@continuousServiceShow');
 
   });
@@ -46,54 +51,54 @@ Route::get('dtable-posts/destroy/{id}', 'dtable\OneTimeServiceAjaxCrudController
 //     return view('frontend.home');
 // });
 
-Route::get('/login', function () {
-    return view('frontend.login');
-});
+// Route::get('/login', function () {
+//     return view('frontend.login');
+// });
 
 
-Route::get('/register', function () {
-    return view('frontend.register');
-});
+// Route::get('/register', function () {
+//     return view('frontend.register');
+// });
 
 
 // Route::get('/product-list', function () {
 //     return view('frontend.product-list');
 // });
-Route::get('/product-list', function () {
-    return view('frontend.product-list');
-});
+// Route::get('/product-list', function () {
+//     return view('frontend.product-list');
+// });
 
-Route::get('/product-detail', function () {
-    return view('frontend.product-detail');
-});
+// Route::get('/product-detail', function () {
+//     return view('frontend.product-detail');
+// });
 
 // Route::get('/package-list', function () {
 //     return view('frontend.package-list');
 // });
 
-Route::get('/sitemap', function () {
-    return view('frontend.sitemap');
-});
+// Route::get('/sitemap', function () {
+//     return view('frontend.sitemap');
+// });
 
-Route::get('/privacy-policy', function () {
-    return view('frontend.privacy-policy');
-});
+// Route::get('/privacy-policy', function () {
+//     return view('frontend.privacy-policy');
+// });
 
 // Route::get('/faq', function () {
 //     return view('frontend.faq');
 // });
 
-Route::get('/terms-of-use', function () {
-    return view('frontend.terms-of-use');
-});
+// Route::get('/terms-of-use', function () {
+//     return view('frontend.terms-of-use');
+// });
 
-Route::get('/welcome', function () {
-    return view('frontend.welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('frontend.welcome');
+// });
 
-Route::get('/thank', function () {
-    return view('frontend.thank');
-});
+// Route::get('/thank', function () {
+//     return view('frontend.thank');
+// });
 
 
 
@@ -101,9 +106,9 @@ Route::get('/thank', function () {
 //     return view('frontend.package-list');
 // });
                         
-Route::get('test', function () {
-    return view('test');
-});
+// Route::get('test', function () {
+//     return view('test');
+// });
 
 
 

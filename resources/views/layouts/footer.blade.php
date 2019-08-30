@@ -5,9 +5,9 @@
 				<h4>OUR COMPANY</h4>
 				<ul>
 					<li><a href="#">About Us</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Term of Use</a></li>
+					<li><a href="{{url('faq')}}">FAQ</a></li>
+					<li><a href="{{url('privacy_policy')}}">Privacy Policy</a></li>
+					<li><a href="{{url('terms_of_use')}}">Term of Use</a></li>
 					<li><a href="#">Careers</a></li>
 					<li><a href="#">Site Map</a></li>
 				</ul>

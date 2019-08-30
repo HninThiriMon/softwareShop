@@ -40,12 +40,18 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{url('bkp/continuous_service')}}"><i class="fa fa-circle-o"></i> Long Term Service Product</a></li>
-            <li><a href="{{url('bkp/onetime_service')}}"><i class="fa fa-circle-o"></i> One Time Service Product</a></li>
+            <li><a href="{{url('dtable-posts')}}"><i class="fa fa-circle-o"></i> One Time Service Product</a></li>
           </ul>
         </li>
-        
+               
         <li>
-          <a href="../admin/pages/calendar.html">
+          <a href="{{url('bkp/promotion_package')}}">
+            <i class="fa fa-folder"></i> <span>Promotion Package</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -54,7 +60,7 @@
           </a>
         </li>
         <li>
-          <a href="../admin/pages/mailbox/mailbox.html">
+          <a href="#">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
@@ -71,15 +77,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../admin/pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li><a href="../admin/pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li><a href="../admin/pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li><a href="../admin/pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li><a href="../admin/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li><a href="../admin/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="../admin/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="../admin/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="../admin/pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Invoice</a></li>
           </ul>
         </li>
         <li class="treeview">

@@ -1,9 +1,7 @@
 @extends('layouts.master')
-
 @section('title','product')
 @section('content')
-
-@include('frontend.layouts.main-slider')
+@include('layouts.main-slider')
 	
 	<div class="container">
 		<div class="row content">
@@ -34,7 +32,7 @@
 	<div class="available-products">
 		<div class="container">
 			<div class="row product">
-				<h2>Product Available</h2>
+				<h2>Promotion  Package</h2>
 				<div class="col-md-4 col-lg-4">
 					<div class="row product__item">
 						<div class="col-lg-3 col-md-3">
@@ -99,8 +97,35 @@
 	<div class="packages">
 		<div class="container">
 			<div class="row package">
-				<h2>Product Package</h2>
+				<h2>Product Available</h2>
+
+                @foreach($continuousServices as $continuousService)
 				<div class="col-md-4 col-lg-4">
+					<div class="package__item">
+						<div class="package__img">
+							<img src="/images/blog_5.jpg">
+						</div>
+						
+						<div class="package__title">
+							<h4>{{$continuousService->name}}</h4>
+							<div class="package__price">
+								<sup>$</sup>
+                                {{$continuousService->price_per_unit}}
+							</div>
+							<small>Per Month</small>
+						</div>
+						<div class="package__body">
+
+							<p>{{$continuousService->description}}</p>
+							
+
+							<a href="{{ url('/package-list') }}" class="package__btn">View More</a> 
+
+						</div>
+					</div>
+				</div>
+                @endforeach
+				<!-- <div class="col-md-4 col-lg-4">
 					<div class="package__item">
 						<div class="package__img">
 							<img src="/images/blog_5.jpg">
@@ -123,34 +148,9 @@
 
 						</div>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="col-md-4 col-lg-4">
-					<div class="package__item">
-						<div class="package__img">
-							<img src="/images/blog_5.jpg">
-						</div>
-						
-						<div class="package__title">
-							<h4>Product Name</h4>
-							<div class="package__price">
-								<sup>$</sup>
-								755
-							</div>
-							<small>Per Year</small>
-						</div>
-						<div class="package__body">
-
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-							
-
-							<a href="{{ url('/package-list') }}" class="package__btn">View More</a> 
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-lg-4">
+				<!-- <div class="col-md-4 col-lg-4">
 					<div class="package__item">
 						<div class="package__img">
 							<img src="/images/blog_5.jpg">
@@ -175,7 +175,7 @@
 
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div><!--packages-->
